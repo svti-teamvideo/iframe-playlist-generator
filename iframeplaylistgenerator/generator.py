@@ -77,7 +77,7 @@ def create_iframe_playlist(playlist):
         total_duration += s_duration
 
     if total_bytes != 0 and total_duration != 0:
-        iframe_bandwidth = str(int(total_bytes / total_duration * 8))
+        iframe_bandwidth = int(total_bytes / total_duration * 8)
     else:
         return (None, None)
 
